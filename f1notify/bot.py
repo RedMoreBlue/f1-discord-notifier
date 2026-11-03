@@ -16,6 +16,9 @@ from .testmsg import build_test_payload
 log = logging.getLogger(__name__)
 
 SESSION_CHOICES = [
+    app_commands.Choice(name="Free Practice 1", value="fp1"),
+    app_commands.Choice(name="Free Practice 2", value="fp2"),
+    app_commands.Choice(name="Free Practice 3", value="fp3"),
     app_commands.Choice(name="Race", value="race"),
     app_commands.Choice(name="Qualifying", value="qualifying"),
     app_commands.Choice(name="Sprint", value="sprint"),

@@ -26,9 +26,9 @@ API_SESSION_FIELDS = {
 }
 
 SESSION_NAMES = {
-    "fp1": "Practice 1",
-    "fp2": "Practice 2",
-    "fp3": "Practice 3",
+    "fp1": "Free Practice 1",
+    "fp2": "Free Practice 2",
+    "fp3": "Free Practice 3",
     "sprint_qualifying": "Sprint Qualifying",
     "sprint": "Sprint",
     "qualifying": "Qualifying",

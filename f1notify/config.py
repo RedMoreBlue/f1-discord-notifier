@@ -65,7 +65,7 @@ def load_config() -> Config:
 
     sessions = frozenset(
         s.strip().lower()
-        for s in env.get("SESSIONS", "sprint_qualifying,sprint,qualifying,race").split(",")
+        for s in env.get("SESSIONS", ",".join(ALL_SESSIONS)).split(",")
         if s.strip()
     )
     unknown = sessions - set(ALL_SESSIONS)
@@ -78,7 +78,7 @@ def load_config() -> Config:
     return Config(
         webhook_url=webhook_url,
         role_id=role_id,
-        reminder_minutes=_int_list(env.get("REMINDER_MINUTES", "60,15,5,0")),
+        reminder_minutes=_int_list(env.get("REMINDER_MINUTES", "15,5")),
         sessions=sessions,
         timezone=ZoneInfo(env.get("TIMEZONE", "Europe/Tallinn").strip()),
         bot_token=env.get("DISCORD_BOT_TOKEN", "").strip() or None,

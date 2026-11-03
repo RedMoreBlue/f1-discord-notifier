@@ -1,6 +1,6 @@
 # F1 Discord Notifier
 
-Pings your Discord **F1 role** before qualifying, sprint and race sessions — by default 1 hour, 15 minutes, 5 minutes before and when the session starts. All times are shown in **Estonian time** (`Europe/Tallinn`, switches between EET/EEST automatically).
+Pings your Discord **F1 role** before every session in the F1 calendar — free practice 1–3, sprint qualifying, sprint, qualifying and the race — 15 and 5 minutes before it starts. All times are shown in **Estonian time** (`Europe/Tallinn`, switches between EET/EEST automatically).
 
 The F1 calendar comes from the free [Jolpica F1 API](https://github.com/jolpica/jolpica-f1) (successor of the Ergast API). It's refreshed every 3 hours, so rescheduled sessions are picked up, and it's cached on disk in case the API is down.
 
@@ -51,8 +51,8 @@ Make sure the container's clock is right (`timedatectl`); it should be by defaul
 |---|---|---|
 | `DISCORD_WEBHOOK_URL` | — | required |
 | `F1_ROLE_ID` | — | required |
-| `REMINDER_MINUTES` | `60,15,5,0` | minutes before start; `0` = "starting now" |
-| `SESSIONS` | `sprint_qualifying,sprint,qualifying,race` | also available: `fp1,fp2,fp3` |
+| `REMINDER_MINUTES` | `15,5` | minutes before start; add `0` for a "starting now" ping |
+| `SESSIONS` | `fp1,fp2,fp3,sprint_qualifying,sprint,qualifying,race` | all sessions; remove any you don't want |
 | `TIMEZONE` | `Europe/Tallinn` | |
 | `DISCORD_BOT_TOKEN` | empty | enables slash commands |
 | `DISCORD_GUILD_ID` | empty | instant slash-command registration |
