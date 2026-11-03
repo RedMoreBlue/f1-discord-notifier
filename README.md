@@ -1,4 +1,4 @@
-# F1 Discord Notifier
+# F1 Discord Notifier (MADE WITH AI :3)
 
 Pings your Discord **F1 role** before every session in the F1 calendar — free practice 1–3, sprint qualifying, sprint, qualifying and the race — 15 and 5 minutes before it starts. All times are shown in **Estonian time** (`Europe/Tallinn`, switches between EET/EEST automatically).
 
