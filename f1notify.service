@@ -1,0 +1,24 @@
+[Unit]
+Description=F1 Discord session notifier
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=f1notify
+Group=f1notify
+WorkingDirectory=/opt/f1-discord-notifier
+ExecStart=/opt/f1-discord-notifier/venv/bin/python -m f1notify run
+Restart=always
+RestartSec=10
+Environment=PYTHONUNBUFFERED=1
+
+# Hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/opt/f1-discord-notifier/data
+
+[Install]
+WantedBy=multi-user.target
