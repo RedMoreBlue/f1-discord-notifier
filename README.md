@@ -31,8 +31,6 @@ nano .env                # fill in DISCORD_WEBHOOK_URL and F1_ROLE_ID (and bot t
 systemctl restart f1notify
 ```
 
-The repo is private, so `git clone` asks for a login: use your GitHub username and a [personal access token](https://github.com/settings/tokens) as the password (or make the repo public — it contains no secrets; those live only in `.env`).
-
 Make sure the container's clock is right (`timedatectl`); it should be by default in an LXC since it uses the host clock.
 
 ## 3. Usage
